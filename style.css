@@ -1,0 +1,147 @@
+body {
+    background-color: #f4f6f9; 
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+/* ==============================================================*/
+.mt-custom-large {
+    margin-top: 8vh; /* Usa la viewport height per adattarsi meglio agli schermi */
+    margin-bottom: 8vh;
+}
+
+/* La card principale */
+.card.rounded-5 {
+    border: none; /* Rimuove il bordo standard di Bootstrap */
+    overflow: hidden; /* Fondamentale: impedisce al footer di "sbordare" oltre gli angoli arrotondati */
+}
+
+/* La card interna per la descrizione */
+.rounded-6 {
+    border-radius: 1.5rem; /* Bootstrap arriva fino a 5, qui creiamo la classe 6 */
+    background-color: #eef2f5; 
+    border: 1px solid #e0e6ed;
+    padding: 20px;
+}
+
+/* ==============================================================*/
+.testo-titolo-pagina {
+    color: #1a202c;
+    letter-spacing: 0.5px;
+    font-size: 2.2rem;
+}
+
+.sottotitolo {
+    color: #6c757d;
+    font-size: 1.15rem;
+}
+
+.testo-descrizione {
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ==============================================================*/
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spazio tra i due pulsanti */
+    margin: 40px ;
+    flex-wrap: wrap; /* Su schermi piccolissimi i bottoni andranno uno sotto l'altro */
+}
+
+.btn {
+    border-radius: 50px; /* Pulsanti a pillola */
+    padding: 12px 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease; /* Animazione fluida al passaggio del mouse */
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color:#0b5ed7;
+    border: 5px solid #0b5ed7;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px); /* Effetto carta sollevata in entrambi i tasti */
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+
+.btn-secondary {
+    background-color: #ffffff; 
+    color: #198754;            
+    border: 5px solid #198754; 
+}
+
+.btn-secondary:hover {
+    background-color: #198754; 
+    color: #ffffff;            
+    border-color: #198754;     
+    transform: translateY(-2px);
+}
+
+/* ==============================================================*/
+.pdf-container {
+    max-width: 380px;
+    margin: 0 auto 40px auto; /* Centra il container e aumenta lo spazio giu */
+}
+
+.pdf-container .card-body {
+    background-color: #ffffff;
+    border: 8px solid #e2e8f0;
+}
+
+.pdf-titolo {
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.pdf-sottotitolo {
+    font-size: 0.9rem;
+    color: #4b6b9b;
+    margin-bottom: 0;
+}
+/* ==============================================================*/
+
+.footer {
+    background-color: #1a1e23;
+    color: #e9ecef;
+    padding: 30px 20px;
+    margin: 0 -2.2rem -1.5rem -2.2rem;/* Per farlo arrivare fino ai bordi della card usiamo i margini negativi compensando quelli enormi di default senno si vede male*/ 
+    border-bottom-left-radius: 1rem; /* Si adatta alla card esterna arrotondata */
+    border-bottom-right-radius: 1rem;
+}
+
+.footer p {
+    margin: 0 0 8px 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #adb5bd;
+}
+
+.footer strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* ==============================================================*/
+@media (max-width: 576px) {
+    .testo-titolo-pagina { font-size: 1.8rem; }
+    .mt-custom-large { margin-top: 3vh; }
+    .btn-container { flex-direction: column; width: 100%; }
+    .btn { width: 100%; } /* Pulsanti larghi 100% su mobile */
+}
+
