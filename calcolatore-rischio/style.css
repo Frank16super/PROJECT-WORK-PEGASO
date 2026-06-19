@@ -1,0 +1,169 @@
+.scheda-calcolatore {
+    background-color: #ffffff;
+    max-width: 600px; 
+    width: 90%; /* Occupa il 90% dello schermo sui cellulari */
+    margin: 3rem auto; 
+    padding: 2rem;
+    border-radius: 1.5rem; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    overflow: hidden; 
+}
+
+/* =====================================*/
+.azioni-intestazione {
+    margin-bottom: 1.5rem;
+}
+
+.pulsante-indietro {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.pulsante-indietro:hover {
+    color: #0d6efd; /* Diventa blu al passaggio del mouse, dal telefono anche se ci passo le dita senza cliccarlo si illumina pure */
+}
+
+.scheda-calcolatore h2 {
+    color: #1a202c;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.scheda-calcolatore h2 small {
+    font-size: 1.1rem;
+    color: #6c757d;
+    font-weight: normal;
+}
+
+/* =========================================*/
+
+.gruppo-modulo {
+    margin-bottom: 1.5rem;
+}
+
+.gruppo-modulo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Stile speciale per la checkbo*/
+.gruppo-interruttore label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #f8fafc;
+    padding: 10px 15px;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* ==================ci ho messo due giorni per fare sta cosa dei select===================*/
+
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #f8fafc;
+    appearance: none; /*ho tolto la freccia della selezione di default del browser e ho messo questa di w3, anche per avere un aspetto piu coerente a prescindere dal device che uso al momento*/
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    outline: none;
+    border-color: #0d6efd; /* Si illumina di blu quando ci clicchi su index ho una cosa simile */
+}
+
+/* =========================================*/
+.risultato {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #f8fafc;
+    color: #1a202c;
+    border: 2px dashed #cbd5e1;
+    transition: all 0.3s ease;
+}
+
+/* Classi dinamiche per il livello di rischio quellee dei colori*/
+.risultato.basso { background-color: #d1e7dd; color: #0f5132; border-color: #badbcc; }
+.risultato.medio { background-color: #fff3cd; color: #664d03; border-color: #ffecb5; }
+.risultato.alto { background-color: #f8d7da; color: #842029; border-color: #f5c2c7; }
+.risultato.critico { background-color: #dc3545; color: #ffffff; border-color: #b02a37; border-style: solid; }
+
+.riquadro-consigli {
+    background-color: #eef2f5; /* Riprende il colore della card interna della index */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 6px solid #6c757d; /* questo e un bordo di default per farlo risultare piu elegante ma poi viene sovrascritto poi da Vue */
+    margin-bottom: 2rem;
+}
+
+.riquadro-consigli h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+    font-size: 1.05rem;
+}
+
+.riquadro-consigli p {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.riquadro-consigli p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========il codice del footer lo riciclato come in verita altre parti dal css
+                del index perche gia ero stanco, fa communque il suo effetto*/
+.footer {
+
+    background-color: #1a1e23;
+    color: #e9ecef;
+    padding: 30px 20px;
+    margin: 0 -2.2rem -1.5rem -2.2rem;/* Per farlo arrivare fino ai bordi della card usiamo i margini negativi compensando quelli enormi di default senno si vede male*/ 
+    border-bottom-left-radius: 1rem; /* Si adatta alla card esterna arrotondata */
+    border-bottom-right-radius: 1rem;
+    
+}
+
+.footer p {
+    margin: 0 0 8px 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #adb5bd;
+}
+
+.footer strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer p:last-child {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #6c757d;
+}
