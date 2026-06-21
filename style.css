@@ -13,7 +13,7 @@ body {
 /* La card principale */
 .card.rounded-5 {
     border: none; /* Rimuove il bordo standard di Bootstrap */
-    overflow: hidden; /* Fondamentale: impedisce al footer di "sbordare" oltre gli angoli arrotondati */
+    overflow: hidden; /* Fondamentale: impedisce al footer di "sbordare" oltre gli angoli arrotondati*/
 }
 
 /* La card interna per la descrizione */
@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px; /* Spazio tra i due pulsanti */
-    margin: 40px ;
+    margin: 40px 0;
     flex-wrap: wrap; /* Su schermi piccolissimi i bottoni andranno uno sotto l'altro */
 }
 
@@ -113,7 +113,7 @@ body {
     background-color: #1a1e23;
     color: #e9ecef;
     padding: 30px 20px;
-    margin: 0 -2.2rem -1.5rem -2.2rem;/* Per farlo arrivare fino ai bordi della card usiamo i margini negativi compensando quelli enormi di default senno si vede male*/ 
+    margin: 0 -2.2rem -1.5rem -2.2rem;/* Per farlo arrivare fino ai bordi della card usiamo i margini negativi compensando quelli enormi di default senno si vede male il valore e ottenuto a tentativi*/ 
     border-bottom-left-radius: 1rem; /* Si adatta alla card esterna arrotondata */
     border-bottom-right-radius: 1rem;
 }
@@ -138,10 +138,12 @@ body {
 }
 
 /* ==============================================================*/
+/* Ho aggiunto queste impostazioni per ottimizzare il sito per mobile al meglio prendendo come spunto due dispositivi di mia appartenenza di dimensioni diverse */
+
 @media (max-width: 576px) {
-    .testo-titolo-pagina { font-size: 1.8rem; }
+    .testo-titolo-pagina { font-size: 1.5rem; }
     .mt-custom-large { margin-top: 3vh; }
-    .btn-container { flex-direction: column; width: 100%; }
-    .btn { width: 100%; } /* Pulsanti larghi 100% su mobile */
+    .btn-container { flex-direction: column; width: 100%; padding: 0 10px }
+    .btn { width: 100%; }
 }
 
