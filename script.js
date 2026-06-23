@@ -7,4 +7,10 @@ window.onload = function() {
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
+    setTimeout(function() {
+        var qrImg = document.querySelector("#qrcode img");
+        if (qrImg) {
+            qrImg.alt = "Errore, riavvia la pagina per generare il nuovo QRcode.";
+        }
+    }, 50);
 };
