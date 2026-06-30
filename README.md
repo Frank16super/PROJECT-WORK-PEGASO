@@ -3,7 +3,7 @@
 ## Tema num. 2: Privacy e sicurezza aziendale
 ### PW 13. Sviluppo di un software mobile-friendly per il calcolo del fattore di rischio
 
-- **URL di accesso alla pagina**: [Visualizza il Progetto](https://frank16super.github.io/PROJECT-WORK-PEGASO/)
+- **URL di accesso alla pagina**: [Visualizza la pagina sul tuo browser](https://frank16super.github.io/PROJECT-WORK-PEGASO/)
 - **Repository GitHub**: [Frank16super/PROJECT-WORK-PEGASO](https://github.com/Frank16super/PROJECT-WORK-PEGASO)
 
 ## Come provare la pagina
